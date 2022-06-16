@@ -28,4 +28,5 @@ export class AppComponent {
       //  ng g class auth/validators/UniqueUsername
   // 282. Nasty Async Validators
   // 283. Understanding Async Validators
+  // 284. Handling Errors from Async Validation
 }
