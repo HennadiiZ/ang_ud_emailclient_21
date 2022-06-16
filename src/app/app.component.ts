@@ -13,4 +13,5 @@ export class AppComponent {
   // ng g m Shared --routing
   // ng g c auth/Signin
   // ng g c auth/Signup
+  // ng g c shared/Input
 }
