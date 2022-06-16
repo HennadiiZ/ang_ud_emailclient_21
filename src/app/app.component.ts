@@ -35,4 +35,7 @@ export class AppComponent {
   // 287. Robust Error Handling
   // 288. Customizing Input Type
   // 289. Fixing a Few Odds and Ends
+
+  // ======== // Section 22: Handling Authentication
+  // 290. Signup Process Overview
 }
