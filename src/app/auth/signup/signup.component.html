@@ -8,19 +8,32 @@
     </div> -->
 
     <app-input
+      inputType="text"
       label="Username"
       [control]="authForm.get('username')"
     ></app-input>
 
-    <div class="field">
+    <!-- <div class="field">
       <label for="">Password</label>
       <input formControlName="password">
-    </div>
+    </div> -->
 
-    <div class="field">
+    <app-input
+      inputType="password"
+      label="Password"
+      [control]="authForm.get('password')"
+    ></app-input>
+
+    <!-- <div class="field">
       <label for="">Password Confirmation</label>
       <input formControlName="passwordConfirmation">
-    </div>
+    </div> -->
+
+    <app-input
+      inputType="password"
+      label="Password Confirmation"
+      [control]="authForm.get('passwordConfirmation')"
+    ></app-input>
 
     <button class="ui submit button primary">Submit</button>
   </form>

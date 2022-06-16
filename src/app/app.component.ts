@@ -33,4 +33,5 @@ export class AppComponent {
       //  ng g service auth/Auth
   // 286. Another Reusable Input
   // 287. Robust Error Handling
+  // 288. Customizing Input Type
 }

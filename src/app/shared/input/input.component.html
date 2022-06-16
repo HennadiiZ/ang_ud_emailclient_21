@@ -1,7 +1,7 @@
 
 <div class="field">
   <label>{{ label }}</label>
-  <input [formControl]="control">
+  <input [type]="inputType" [formControl]="control">
   <div *ngIf="showErrors()" class="ui pointing red basic label">
     <small *ngIf="control.errors.required">
       This field is required!
