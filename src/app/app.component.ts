@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'emailclient_21';
+  // https://api.angular-email.com
+
+  // ng g m Auth --routing
+  // ng g m Shared --routing
 }
