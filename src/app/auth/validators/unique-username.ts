@@ -5,15 +5,15 @@ import { AbstractControl, AsyncValidator, AsyncValidatorFn, FormControl, FormGro
 
 @Injectable({ providedIn: 'root' })
 export class UniqueUsername implements AsyncValidator{
+  url = "https://api.angular-email.com";
+  
   constructor(private http: HttpClient) {}
 
   validate = (control: AbstractControl) => {
     const { value } = control;
-
-    console.log(value);
-    console.log(this.http);
-
-    return value;
+    // console.log(value);
+    // console.log(this.http);
+    return this.http.post<any>(`${this.url}/auth/username`, { username: value })
   }
 }
 
