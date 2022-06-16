@@ -21,5 +21,6 @@ export class AppComponent {
   // 276. Adding a Signup Form
   // 277. Adding Basic Styling ( npm i semantic-ui-css )
   // 278. Username and Password Validation
-  // 
+  // 279. Writing Custom Validators
+  //      ng g class auth/validators/MatchPassword
 }
