@@ -24,5 +24,7 @@ export class AppComponent {
   // 279. Writing Custom Validators
       //  ng g class auth/validators/MatchPassword
   // 280. Connecting Custom Validators
-  
+  // 281. Implementing Async Validators
+      //  ng g class auth/validators/UniqueUsername
+
 }
