@@ -20,3 +20,16 @@
     <button class="ui submit button primary">Submit</button>
   </form>
 </div>
+
+<hr>
+<p>Debugging</p>
+<div>
+  Username {{ authForm.get('username')!.errors | json }}
+</div>
+<div>
+  Password  {{ authForm.get('password')!.errors | json }}
+</div>
+<div>
+  Password Confirmation  {{ authForm.get('passwordConfirmation')!.errors | json }}
+</div>
+

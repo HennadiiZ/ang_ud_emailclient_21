@@ -20,5 +20,6 @@ export class AppComponent {
   // 275. Navigation Reminder
   // 276. Adding a Signup Form
   // 277. Adding Basic Styling ( npm i semantic-ui-css )
-  //
+  // 278. Username and Password Validation
+  // 
 }
