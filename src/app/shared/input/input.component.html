@@ -2,4 +2,30 @@
 <div class="field">
   <label>{{ label }}</label>
   <input [formControl]="control">
+  <div *ngIf="showErrors()" class="ui pointing red basic label">
+    <small *ngIf="control.errors.required">
+      This field is required!
+    </small>
+    <small *ngIf="control.errors.minlength">
+      This field must contain at least
+      {{ control.errors.minlength.requiredLength }}
+      characters. Now it contains
+      {{ control.errors.minlength.actualLength }} characters.
+    </small>
+    <small *ngIf="control.errors.maxlength">
+      This field must contain maximum
+      {{ control.errors.maxlength.requiredLength }}
+      characters.Now it contains
+      {{ control.errors.maxlength.actualLength }} characters.
+    </small>
+    <small *ngIf="control.errors.pattern">
+      Invalid format!
+    </small>
+    <small *ngIf="control.errors.nonUniqueUsername">
+      This username is taken!
+    </small>
+    <small *ngIf="control.errors.noConnection">
+      No internet connection...
+    </small>
+  </div>
 </div>
