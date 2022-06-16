@@ -2,10 +2,15 @@
   <h3>Create an Account</h3>
 
   <form [formGroup]="authForm" class="form ui">
-    <div class="field">
+    <!-- <div class="field">
       <label for="">Username</label>
       <input formControlName="username">
-    </div>
+    </div> -->
+
+    <app-input
+      label="Username"
+      [control]="authForm.get('username')"
+    ></app-input>
 
     <div class="field">
       <label for="">Password</label>
@@ -21,7 +26,7 @@
   </form>
 </div>
 
-<hr>
+<!-- <hr>
 <p>Debugging</p>
 <div>
   Username {{ authForm.get('username')!.errors | json }}
@@ -34,5 +39,5 @@
 </div>
 <div>
   match Password  {{ authForm.errors | json }}
-</div>
+</div> -->
 
