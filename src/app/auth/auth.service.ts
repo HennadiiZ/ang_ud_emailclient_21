@@ -15,4 +15,8 @@ export class AuthService {
       username
     })
   }
+
+  signup(formCredentials: any){
+    return this.http.post<any>(`${this.url}/auth/signup`, formCredentials)
+  }
 }
