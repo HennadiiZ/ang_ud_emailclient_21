@@ -75,5 +75,6 @@ export class AppComponent implements OnInit{
   // 300. Exact Active Links ([routerLinkActiveOptions]='{ exact: true }')
   // 301. Checking Auth Status
   // 302. A Gotcha Around the HttpClient ({ withCredentials: true } - did nit work for me. No cookies)
-
+  // 303. HTTP Interceptors (ng g class auth/AuthHttpInterceptor)
+  // 304. Wiring up an Interceptor
 }
