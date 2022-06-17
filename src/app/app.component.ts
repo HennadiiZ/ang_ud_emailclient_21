@@ -41,5 +41,5 @@ export class AppComponent {
   // 291. Making the Signup Request
   // 292. Cleaning up the Auth Service
   // 293. + 294. Handling Signup Errors + Generic Error Handling
-  // 
+  // 295. Adding a Navigation Header
 }
