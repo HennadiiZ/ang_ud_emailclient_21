@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
+import { SignupCredentials, SignupResponse, UsernameAvailableResponse } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,12 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   usernameAvailable(username: string) {
-    return this.http.post<{message: string}>(`${this.url}/auth/username`, {
+    return this.http.post<UsernameAvailableResponse>(`${this.url}/auth/username`, {
       username
     })
   }
 
-  signup(formCredentials: any){
-    return this.http.post<any>(`${this.url}/auth/signup`, formCredentials)
+  signup(formCredentials: SignupCredentials){
+    return this.http.post<SignupResponse>(`${this.url}/auth/signup`, formCredentials)
   }
 }

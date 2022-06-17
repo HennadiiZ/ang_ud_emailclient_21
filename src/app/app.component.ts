@@ -39,4 +39,6 @@ export class AppComponent {
   // ======== // Section 22: Handling Authentication
   // 290. Signup Process Overview
   // 291. Making the Signup Request
+  // 292. Cleaning up the Auth Service
+  // 
 }
