@@ -68,4 +68,5 @@ export class AppComponent implements OnInit{
   // 296. + 297. Maintaining Authentication State + Oh No, More RxJs
   // 298. Using BehaviorSubjects
   // 299. The Async Pipe
+  // 300. Exact Active Links ([routerLinkActiveOptions]='{ exact: true }')
 }
