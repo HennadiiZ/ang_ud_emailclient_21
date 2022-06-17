@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
 
   signOut() {
     this.authService.signout().subscribe((response) => {
-      
+
     })
   }
 
@@ -86,6 +86,6 @@ export class AppComponent implements OnInit{
   // 305. 306. Modifying Outgoing Requests +  Other Uses of Interceptors
   // 307. A Little Record Keeping
   // 308. Adding Sign Out
-  //
+  // 309. Automated Signouts / ng g c auth/Signout --skip-tests
 
 }
