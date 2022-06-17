@@ -90,6 +90,7 @@ export class AppComponent implements OnInit{
   // 310. Programmatic Navigation (router: Router) - very inveresting
   // 311. Building the Sign In Flow
   // 312. Sign In Authentication
+  // 313. Showing Authentication Errors
   // 
 
 }
