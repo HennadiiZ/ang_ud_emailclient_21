@@ -24,6 +24,10 @@ export class AppComponent implements OnInit{
     // this.authService.signedInBehSubj$.subscribe((signedin) => {
     //    this.signedin = signedin
     // })
+
+    this.authService.checkAuth().subscribe((response) => {
+      console.log(response.authenticated)
+    })
   }
 
 
@@ -69,4 +73,5 @@ export class AppComponent implements OnInit{
   // 298. Using BehaviorSubjects
   // 299. The Async Pipe
   // 300. Exact Active Links ([routerLinkActiveOptions]='{ exact: true }')
+  // 301. Checking Auth Status
 }
