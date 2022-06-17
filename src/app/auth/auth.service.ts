@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, tap } from 'rxjs';
-import { SignupCredentials, SignupResponse, UsernameAvailableResponse } from '../interfaces';
+import { SignedinResponse, SignupCredentials, SignupResponse, UsernameAvailableResponse } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -31,13 +31,19 @@ export class AuthService {
   }
 
   checkAuth(){
-    return this.http.get<any>(
+    return this.http.get<SignedinResponse>(
       `${this.url}/auth/signedin`,
       // { withCredentials: true }
     )
     .pipe(
-      tap((response) => {
-        console.log(response);
+      tap(({ authenticated }) => {
+        // console.log(response);
+
+        // this.signedInBehSubj$.next(authenticated); // not working
+        // console.log(authenticated);
+
+        this.signedInBehSubj$.next(true); // rewriting to my way. Looks like it is working now
+        console.log(authenticated); // always false ???
       })
     );
   }

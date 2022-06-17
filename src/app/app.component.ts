@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
     // })
 
     this.authService.checkAuth().subscribe((response) => {
-      console.log(response.authenticated)
+      // console.log(response.authenticated)
     })
   }
 
@@ -78,6 +78,7 @@ export class AppComponent implements OnInit{
   // 303. HTTP Interceptors (ng g class auth/AuthHttpInterceptor)
   // 304. Wiring up an Interceptor
   // 305. 306. Modifying Outgoing Requests +  Other Uses of Interceptors
+  // 307. A Little Record Keeping
   //
 
 }

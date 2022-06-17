@@ -18,20 +18,20 @@ export class AuthHttpInterceptor implements HttpInterceptor {
     })
     // console.log("+++", modifiedRequest);
     return next.handle(modifiedRequest) // <---- this is an observable
-          .pipe(
-            filter(val => val.type === HttpEventType.Sent),
+          // .pipe(
+          //   filter(val => val.type === HttpEventType.Sent),
 
-            tap(val => {
-              // console.log("===",val);
-              // if(val.type === HttpEventType.Sent) {
-              //   console.log("Request was sent to server");
-              // }
+          //   tap(val => {
+          //     // console.log("===",val);
+          //     // if(val.type === HttpEventType.Sent) {
+          //     //   console.log("Request was sent to server");
+          //     // }
 
-              // if(val.type === HttpEventType.Response) {
-              //   console.log("Got a response from server", val);
-              // }
-            })
-          )
+          //     // if(val.type === HttpEventType.Response) {
+          //     //   console.log("Got a response from server", val);
+          //     // }
+          //   })
+          // )
   }
 
 }
