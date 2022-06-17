@@ -30,6 +30,12 @@ export class AppComponent implements OnInit{
     })
   }
 
+  signOut() {
+    this.authService.signout().subscribe((response) => {
+      
+    })
+  }
+
 
 
 
@@ -79,6 +85,7 @@ export class AppComponent implements OnInit{
   // 304. Wiring up an Interceptor
   // 305. 306. Modifying Outgoing Requests +  Other Uses of Interceptors
   // 307. A Little Record Keeping
+  // 308. Adding Sign Out
   //
 
 }

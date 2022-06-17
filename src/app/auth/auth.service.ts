@@ -47,4 +47,14 @@ export class AuthService {
       })
     );
   }
+
+  signout(){
+    // this.signedInBehSubj$.next(false);
+    return this.http.post<any>(`${this.url}/auth/signout`, {})
+          .pipe(
+            tap(() => {
+              this.signedInBehSubj$.next(false);
+            })
+          )
+  }
 }
