@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { AuthService } from './auth/auth.service';
 
 @Component({
@@ -7,19 +8,22 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  signedin = false;
+  // signedin = false;
+  signedIn$!: BehaviorSubject<boolean>;
 
   constructor(private authService: AuthService){
     // here or in ngOnInit... it is the same
     // this.authService.signedInBehSubj$.subscribe((signedin) => {
     //   this.signedin = signedin
     // })
+
+    this.signedIn$ = this.authService.signedInBehSubj$;
   }
 
   ngOnInit(){
-    this.authService.signedInBehSubj$.subscribe((signedin) => {
-      this.signedin = signedin
-    })
+    // this.authService.signedInBehSubj$.subscribe((signedin) => {
+    //    this.signedin = signedin
+    // })
   }
 
 
@@ -63,4 +67,5 @@ export class AppComponent implements OnInit{
   // 295. Adding a Navigation Header
   // 296. + 297. Maintaining Authentication State + Oh No, More RxJs
   // 298. Using BehaviorSubjects
+  // 299. The Async Pipe
 }
