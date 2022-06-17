@@ -30,6 +30,10 @@ export class SigninComponent implements OnInit {
   }
 
   submit(){
+    if(this.authForm.invalid){
+      return;
+    }
+    
     this.authService.signin(this.authForm.value).subscribe((response) => {
       console.log(response);
     })

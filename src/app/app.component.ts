@@ -89,6 +89,7 @@ export class AppComponent implements OnInit{
   // 309. Automated Signouts / ng g c auth/Signout --skip-tests
   // 310. Programmatic Navigation (router: Router) - very inveresting
   // 311. Building the Sign In Flow
-  //
+  // 312. Sign In Authentication
+  // 
 
 }
