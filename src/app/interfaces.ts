@@ -12,6 +12,10 @@ export interface SignupResponse {
   username: string;
 }
 
+export interface SigninResponse {
+  username: string;
+}
+
 export interface SignedinResponse {
   authenticated: boolean;
   username?: string;

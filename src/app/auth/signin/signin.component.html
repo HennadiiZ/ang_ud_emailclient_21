@@ -1,1 +1,40 @@
-<p>signin works!</p>
+<div class="container">
+  <h3>Sign In!</h3>
+
+  <form [formGroup]="authForm" class="form ui" (ngSubmit)="submit()">
+    <app-input
+      inputType="text"
+      label="Username"
+      [control]="authForm.get('username')"
+    ></app-input>
+
+    <app-input
+      inputType="password"
+      label="Password"
+      [control]="authForm.get('password')"
+    ></app-input>
+
+    <!-- <div
+      class="ui pointing red basic label"
+      *ngIf="authForm.get('passwordConfirmation')!.touched &&
+      authForm.get('password')!.touched &&
+      authForm.errors
+      "
+      >
+        <small *ngIf="authForm.errors!['passwordsDontMatch']">
+          Password and Password Confirmation must match.
+        </small>
+        <small *ngIf="authForm.errors!['noConnection']">
+          No internet connection detected.
+        </small>
+        <small *ngIf="authForm.errors!['unknownError']">
+          Failed to sign up.
+        </small>
+    </div> -->
+    <div>
+        <button
+        class="ui submit button primary"
+      >Submit</button>
+    </div>
+  </form>
+</div>
