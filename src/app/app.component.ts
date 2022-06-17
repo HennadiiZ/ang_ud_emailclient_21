@@ -77,4 +77,7 @@ export class AppComponent implements OnInit{
   // 302. A Gotcha Around the HttpClient ({ withCredentials: true } - did nit work for me. No cookies)
   // 303. HTTP Interceptors (ng g class auth/AuthHttpInterceptor)
   // 304. Wiring up an Interceptor
+  // 305. 306. Modifying Outgoing Requests +  Other Uses of Interceptors
+  //
+
 }

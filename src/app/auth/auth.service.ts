@@ -22,7 +22,7 @@ export class AuthService {
     return this.http.post<SignupResponse>(
       `${this.url}/auth/signup`,
       formCredentials,
-      { withCredentials: true }
+      // { withCredentials: true }
     ).pipe(
       tap(() => {
         this.signedInBehSubj$.next(true);
@@ -33,7 +33,7 @@ export class AuthService {
   checkAuth(){
     return this.http.get<any>(
       `${this.url}/auth/signedin`,
-      { withCredentials: true }
+      // { withCredentials: true }
     )
     .pipe(
       tap((response) => {
