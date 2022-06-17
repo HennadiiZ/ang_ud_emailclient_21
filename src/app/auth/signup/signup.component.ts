@@ -46,10 +46,31 @@ export class SignupComponent implements OnInit {
       return;
     }
     // console.log(this.authForm.value);
+    // this.authService.signup(this.authForm.value)
+    //   .subscribe((response) => {
+    //     console.log("this is", response.username)
+    //   });
+
     this.authService.signup(this.authForm.value)
-      .subscribe((response) => {
-        console.log("this is", response.username)
-      });
+    .subscribe({
+      // next(response){
+      //   console.log(this); // not working. so it is better to make an arrow function.
+      // },
+      // error(){},
+      // complete(){}
+
+      next: (response) => {
+        console.log(this); // SignupComponent {.....}
+        // navigate to some other route
+      },
+      error: (error) => {
+        console.log(error);
+        if (!error.status) {
+          this.authForm.setErrors({ noConnection: true })
+        }
+      },
+      complete: () => {}
+    });
   }
 
 }

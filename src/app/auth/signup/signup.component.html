@@ -27,11 +27,14 @@
       authForm.errors
       "
       >
-        <small>
-          Password and Password Confirmation must match.
-        </small>
         <small *ngIf="authForm.errors!['passwordsDontMatch']">
           Password and Password Confirmation must match.
+        </small>
+        <small *ngIf="authForm.errors!['noConnection']">
+          No internet connection detected.
+        </small>
+        <small *ngIf="authForm.errors!['unknownError']">
+          Failed to sign up.
         </small>
     </div>
     <div>
