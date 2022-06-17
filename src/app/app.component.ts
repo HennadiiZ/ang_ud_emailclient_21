@@ -1,12 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'emailclient_21';
+export class AppComponent implements OnInit{
+  signedin = false;
+
+  constructor(private authService: AuthService){
+    // here or in ngOnInit... it is the same
+    // this.authService.signedInBehSubj$.subscribe((signedin) => {
+    //   this.signedin = signedin
+    // })
+  }
+
+  ngOnInit(){
+    this.authService.signedInBehSubj$.subscribe((signedin) => {
+      this.signedin = signedin
+    })
+  }
+
+
+
+
+
   // https://api.angular-email.com
 
   // ng g m Auth --routing
@@ -42,4 +61,6 @@ export class AppComponent {
   // 292. Cleaning up the Auth Service
   // 293. + 294. Handling Signup Errors + Generic Error Handling
   // 295. Adding a Navigation Header
+  // 296. + 297. Maintaining Authentication State + Oh No, More RxJs
+  // 298. Using BehaviorSubjects
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
+import { BehaviorSubject, tap } from 'rxjs';
 import { SignupCredentials, SignupResponse, UsernameAvailableResponse } from '../interfaces';
 
 @Injectable({
@@ -8,6 +8,7 @@ import { SignupCredentials, SignupResponse, UsernameAvailableResponse } from '..
 })
 export class AuthService {
   url = "https://api.angular-email.com";
+  signedInBehSubj$ = new BehaviorSubject(false);
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +19,12 @@ export class AuthService {
   }
 
   signup(formCredentials: SignupCredentials){
-    return this.http.post<SignupResponse>(`${this.url}/auth/signup`, formCredentials)
+    return this.http.post<SignupResponse>(
+      `${this.url}/auth/signup`, formCredentials
+    ).pipe(
+      tap(() => {
+        this.signedInBehSubj$.next(true);
+      })
+    )
   }
 }
