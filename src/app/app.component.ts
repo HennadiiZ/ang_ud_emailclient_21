@@ -74,4 +74,6 @@ export class AppComponent implements OnInit{
   // 299. The Async Pipe
   // 300. Exact Active Links ([routerLinkActiveOptions]='{ exact: true }')
   // 301. Checking Auth Status
+  // 302. A Gotcha Around the HttpClient ({ withCredentials: true } - did nit work for me. No cookies)
+
 }
