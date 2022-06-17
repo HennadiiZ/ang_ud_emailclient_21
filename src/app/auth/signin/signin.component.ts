@@ -38,12 +38,19 @@ export class SigninComponent implements OnInit {
       next: (response) => {
         console.log(response);
       },
-      error: (error) => {
+      // error: (error) => {
+      //   console.log(error);
+      //   console.log(error.error.password);
+      //   console.log(error.error.username);
+      //   if (!error.status) {
+      //     this.authForm.setErrors({ noConnection: true })
+      //   }
+      // },
+      error: ({error}) => {
         console.log(error);
-        console.log(error.error.password);
-        console.log(error.error.username);
-        if (!error.status) {
-          this.authForm.setErrors({ noConnection: true })
+
+        if (error.password || error.username) {
+          this.authForm.setErrors({ credentials: true });
         }
       },
       complete: () => {}
