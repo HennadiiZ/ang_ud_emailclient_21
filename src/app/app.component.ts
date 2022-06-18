@@ -92,5 +92,6 @@ export class AppComponent implements OnInit{
   // 312. Sign In Authentication
   // 313. Showing Authentication Errors
   // 314. Inbox Module Design / (ng g m Inbox --routing) / (ng g c inbox/Home)
-  //
+  // 315. Navigation on Authentication
+  // 
 }
