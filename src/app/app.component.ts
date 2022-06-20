@@ -93,5 +93,12 @@ export class AppComponent implements OnInit{
   // 313. Showing Authentication Errors
   // 314. Inbox Module Design / (ng g m Inbox --routing) / (ng g c inbox/Home)
   // 315. Navigation on Authentication
+
+  // ======== // Section 23: More on Angular App Security
+  // 316. Restricting Routing with Guards / ng g guard auth/Auth
+          // CanActivate
+          // CanActivateChild
+          // CanDeactivate
+          // CanLoad
   // 
 }
