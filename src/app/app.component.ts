@@ -104,4 +104,12 @@ export class AppComponent implements OnInit{
   // 318. A Solution to the Guard with RxJs
   // 319. Implementing Our RxJs Solution
   // 320. Navigation on Failing a Guard
+
+  // ======== // Section 24: Build a Real Email Client!
+  // 321. Generating Inbox Components
+        // ng g c inbox/EmailCreate --skip-tests
+        // ng g c inbox/EmailReply --skip-tests
+        // ng g c inbox/EmailIndex --skip-tests
+        // ng g c inbox/EmailShow --skip-tests
+        // ng g s inbox/Email --skip-tests
 }
