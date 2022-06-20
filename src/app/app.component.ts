@@ -100,5 +100,8 @@ export class AppComponent implements OnInit{
           // CanActivateChild
           // CanDeactivate
           // CanLoad
-  // 
+  // 317. Issues With Guards
+  // 318. A Solution to the Guard with RxJs
+  // 319. Implementing Our RxJs Solution
+  // 320. Navigation on Failing a Guard
 }

@@ -8,7 +8,7 @@ import { SignedinResponse, SigninResponse, SignupCredentials, SignupResponse, Us
 })
 export class AuthService {
   url = "https://api.angular-email.com";
-  signedInBehSubj$ = new BehaviorSubject(false);
+  signedInBehSubj$ = new BehaviorSubject(null as any);
 
   constructor(private http: HttpClient) { }
 
