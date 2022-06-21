@@ -21,3 +21,10 @@ export interface SignedinResponse {
   authenticated: boolean;
   username?: string;
 }
+
+
+export interface EmailSummary {
+  id: string;
+  subject: string;
+  from: string;
+}

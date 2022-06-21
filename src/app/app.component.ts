@@ -112,4 +112,7 @@ export class AppComponent implements OnInit{
         // ng g c inbox/EmailIndex --skip-tests
         // ng g c inbox/EmailShow --skip-tests
         // ng g s inbox/Email --skip-tests
+  // 322. Retrieving Emails
+  // 323. Adding Email Fetching to the Service
+  //
 }
