@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs';
 import { EmailService } from '../email.service';
 
 @Component({
@@ -37,11 +38,21 @@ export class EmailShowComponent implements OnInit {
     //   console.log(this.activatedRoute.snapshot.params['id']);
     // }, 1000);
 
-    this.activatedRoute.params.subscribe(({id}) => {
-      this.emailService.getEmail(id).subscribe(email => {
-        console.log(email);
-      });
-    });
+    // 333. Issues with Nested Subscribes
+    // this.activatedRoute.params.subscribe(({id}) => {
+    //   this.emailService.getEmail(id).subscribe(email => {
+    //     console.log(email);
+    //   });
+    // });
+
+    // 334. Canceling Previous Email Requests
+    this.activatedRoute.params.pipe(
+      switchMap(({ id }) => {
+        return this.emailService.getEmail(id);
+      })
+    ).subscribe((email) => {
+      console.log(email);
+    })
   }
 
 }

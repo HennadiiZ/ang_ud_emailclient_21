@@ -122,7 +122,7 @@ export class AppComponent implements OnInit{
   // 331. Accessing Route Information
   // ++ 332. Snapshot vs Observable Route Params
   // 333. Issues with Nested Subscribes
-  // 334
+  // 334. Canceling Previous Email Requests
   // 335
   // 336
   // 337
