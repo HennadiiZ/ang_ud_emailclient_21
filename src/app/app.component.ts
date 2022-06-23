@@ -124,6 +124,7 @@ export class AppComponent implements OnInit{
   // 333. Issues with Nested Subscribes
   // 334. Canceling Previous Email Requests
   // 335. Handling Undefined Data
-  // 336
-  // 337
+  // 336.+ 337. Reusable Data Fetching with Resolvers + Using a Resolver
+          // ng g s inbox/EmailResolver --skip-tests
+  // 338
 }

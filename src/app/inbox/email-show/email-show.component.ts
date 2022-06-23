@@ -15,7 +15,13 @@ export class EmailShowComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private emailService: EmailService
-  ) { }
+  ) {
+    console.log(this.activatedRoute.snapshot.data);
+    // this.email = this.activatedRoute.snapshot.data['email'];
+    this.activatedRoute.data.subscribe((data) => {
+      console.log(data);
+    })
+  }
 
   ngOnInit(): void {
     // console.log(this.activatedRoute)
@@ -48,14 +54,15 @@ export class EmailShowComponent implements OnInit {
     // });
 
     // 334. Canceling Previous Email Requests
-    this.activatedRoute.params.pipe(
-      switchMap(({ id }) => {
-        return this.emailService.getEmail(id);
-      })
-    ).subscribe((email) => {
-      console.log(email);
-      this.email = email;
-    })
+    // this.activatedRoute.params
+    // .pipe(
+    //   switchMap(({ id }) => {
+    //     return this.emailService.getEmail(id);
+    //   })
+    // ).subscribe((email) => {
+    //   console.log(email);
+    //   this.email = email;
+    // })
   }
 
 }
