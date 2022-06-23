@@ -118,5 +118,6 @@ export class AppComponent implements OnInit{
   // 325. Rendering a List of Emails
   // 326. Child Route Navigation (ng g c inbox/PlaceholderMail)
   // 327.+ 328.+ 329. Relative Links with Router Link + Styling the Selected Email + Placeholder Markup
-  //
+  // 330. Extracting URL Params
+  // 
 }
