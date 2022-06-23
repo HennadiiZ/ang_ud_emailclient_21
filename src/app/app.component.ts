@@ -116,5 +116,5 @@ export class AppComponent implements OnInit{
   // 323. Adding Email Fetching to the Service
   // 324. Connecting the Service - not working
   // 325. Rendering a List of Emails
-  //
+  // 326. Child Route Navigation (ng g c inbox/PlaceholderMail)
 }
