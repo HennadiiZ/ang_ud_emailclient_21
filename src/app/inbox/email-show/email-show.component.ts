@@ -25,8 +25,13 @@ export class EmailShowComponent implements OnInit {
     // })
 
     // 2 way
-    console.log(this.activatedRoute.snapshot);
-    console.log(this.activatedRoute.snapshot.params['id']);
+    // console.log(this.activatedRoute.snapshot);
+    // console.log(this.activatedRoute.snapshot.params['id']);
+
+    // 332. Snapshot vs Observable Route Params
+    // setInterval(() => {
+    //   console.log(this.activatedRoute.snapshot.params['id']);
+    // }, 1000);
   }
 
 }

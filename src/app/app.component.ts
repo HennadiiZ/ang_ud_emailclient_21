@@ -120,4 +120,5 @@ export class AppComponent implements OnInit{
   // 327.+ 328.+ 329. Relative Links with Router Link + Styling the Selected Email + Placeholder Markup
   // 330. Extracting URL Params
   // 331. Accessing Route Information
+  // ++ 332. Snapshot vs Observable Route Params
 }
