@@ -127,7 +127,7 @@ export class AppComponent implements OnInit{
   // 336.+ 337. Reusable Data Fetching with Resolvers + Using a Resolver
           // ng g s inbox/EmailResolver --skip-tests
   // 338. Communicating Data Out of a Resolver
-  // 339.
+  // 339. (EMPTY from rxjs) Error Handling with Resolvers (ng g c inbox/NotFound --skip-tests)
   // 340.
   // 341.
   // 342.
