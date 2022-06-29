@@ -18,9 +18,14 @@ export class EmailShowComponent implements OnInit {
   ) {
     console.log(this.activatedRoute.snapshot.data);
     // this.email = this.activatedRoute.snapshot.data['email'];
-    this.activatedRoute.data.subscribe((data) => {
-      console.log(data);
-    })
+
+    // this.activatedRoute.data.subscribe((data) => {
+    //   console.log(data);
+    // })
+
+    this.activatedRoute.data.subscribe( ({ email }) => {
+      this.email = email;
+    });
   }
 
   ngOnInit(): void {
