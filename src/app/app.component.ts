@@ -136,5 +136,5 @@ export class AppComponent implements OnInit{
   // 346. Providing a Form Default Values
   // 347. Displaying Email Inputs
   // 348. Adding Form Validation
-  // 349.
+  // 349. Displaying Textarea instead of Text Input
 }
