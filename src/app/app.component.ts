@@ -135,6 +135,6 @@ export class AppComponent implements OnInit{
   // 345. Toggling Modal Visibility (ng g c inbox/EmailForm)
   // 346. Providing a Form Default Values
   // 347. Displaying Email Inputs
-  // 348.
+  // 348. Adding Form Validation
   // 349.
 }
