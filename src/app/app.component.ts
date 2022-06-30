@@ -131,4 +131,6 @@ export class AppComponent implements OnInit{
   // 340. Showing Email HTML (did not do it)
   // 341. + 342. Component Reuse in Email Creation + A Reusable Modal (ng g c shared/Modal)
   // 343. Some More Modal Implementation
+  // 344. Where to Place the Modal?
+  // 349.
 }
