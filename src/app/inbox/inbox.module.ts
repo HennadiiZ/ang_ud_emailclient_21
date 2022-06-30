@@ -10,6 +10,7 @@ import { EmailShowComponent } from './email-show/email-show.component';
 import { PlaceholderMailComponent } from './placeholder-mail/placeholder-mail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from '../shared/shared.module';
+import { EmailFormComponent } from './email-form/email-form.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SharedModule } from '../shared/shared.module';
     EmailIndexComponent,
     EmailShowComponent,
     PlaceholderMailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EmailFormComponent
   ],
   imports: [
     CommonModule,
