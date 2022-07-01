@@ -14,7 +14,7 @@ export interface SignupResponse {
 
 export interface SigninResponse {
   username: string;
-  password: string;
+  password?: string;
 }
 
 export interface SignedinResponse {
@@ -37,3 +37,4 @@ export interface Email {
   from: string;
   html: string;
 }
+

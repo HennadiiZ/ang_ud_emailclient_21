@@ -9,6 +9,7 @@ import { SignedinResponse, SigninResponse, SignupCredentials, SignupResponse, Us
 export class AuthService {
   url = "https://api.angular-email.com";
   signedInBehSubj$ = new BehaviorSubject(null as any);
+  username!: string;
 
   constructor(private http: HttpClient) { }
 
@@ -24,8 +25,13 @@ export class AuthService {
       formCredentials,
       // { withCredentials: true }
     ).pipe(
-      tap(() => {
+      // tap((response) => {
+      //   this.signedInBehSubj$.next(true);
+      //   this.username = response.username;
+      // })
+      tap(({ username }) => {
         this.signedInBehSubj$.next(true);
+        this.username = username;
       })
     )
   }
@@ -35,8 +41,9 @@ export class AuthService {
       `${this.url}/auth/signin`,
       formCredentials,
     ).pipe(
-      tap(() => {
+      tap(({ username }) => {
         this.signedInBehSubj$.next(true);
+        this.username = username;
       })
     )
   }
@@ -47,14 +54,15 @@ export class AuthService {
       // { withCredentials: true }
     )
     .pipe(
-      tap(({ authenticated }) => {
+      tap(({ authenticated, username }) => {
         // console.log(response);
 
         // this.signedInBehSubj$.next(authenticated); // not working
         // console.log(authenticated);
-
+        // this.username = username;
         this.signedInBehSubj$.next(true); // rewriting to my way. Looks like it is working now
         console.log(authenticated); // always false ???
+
       })
     );
   }
