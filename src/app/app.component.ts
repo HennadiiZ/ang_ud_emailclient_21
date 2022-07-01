@@ -138,4 +138,6 @@ export class AppComponent implements OnInit{
   // 348. Adding Form Validation
   // 349. Displaying Textarea instead of Text Input
   // 350. Capturing the Username
+  // 351. Submitting a New Email
+  // 
 }
